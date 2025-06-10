@@ -10,7 +10,7 @@ console.log('Form submitted!')
 
   const formData = new FormData(form)
   const name = formData.get('itemName')
-  const quantity = parseInt(formData.get('quantity'))
+  const quantity = formData.get('quantity')
   const date = formData.get('expiryDate')
 
   console.log({ name, quantity, date })
