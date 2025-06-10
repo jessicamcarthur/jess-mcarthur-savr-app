@@ -188,6 +188,36 @@ img {
   height: 24px;
 }
 
+img.recipe {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+#recipe-page header img.recipe {
+  display: block;
+  margin-bottom: 0;
+}
+
+#recipe-page header .title {
+  margin-top: 0;
+}
+
+
+#recipe-page .ingredients .item .step {
+  margin: 0;
+}
+
+#recipe-page .ingredients .name {
+  font-weight: normal;
+}
+
+#recipe-page .ingredients .name.bold, #recipe-page .item .step.bold {
+  font-weight: bold;
+}
+
 :root {
   --bottom-nav-height: 60px;
 }
