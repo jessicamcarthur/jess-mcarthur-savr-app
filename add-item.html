@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
     rel="stylesheet">
-  <title>Overview - Inventory App</title>
+  <title>Add Item - Savr</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/add-item.js" defer></script>
 </head>
@@ -21,13 +21,13 @@
 
     <form id="add-item" action="/inventory.html" method="POST">
       <label>Item Name:</label>
-      <input type="text" name="itemName" required /><br /><br />
+      <input type="text" name="itemName" required />
 
       <label>Quantity:</label>
-      <input type="text" name="quantity" min="1" required /> <br><br>
+      <input type="text" name="quantity" min="1" required />
 
       <label>Expiry Date:</label>
-      <input type="date" name="expiryDate" required /><br /><br />
+      <input type="date" name="expiryDate" required />
 
       <button type="submit">Add Item</button>
     </form>
