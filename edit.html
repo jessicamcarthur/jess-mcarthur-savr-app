@@ -7,35 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet">
-    <title>Overview - Inventory App</title>
+    <title>Edit - Savr</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/script.js" defer></script>
+    <script type="module" src="js/edit.js" defer></script>
 </head>
 
 <body id="edit-page">
     <main class="container">
         <header>
             <a href="inventory.html">Back</a>
-            <h1 class="title">Avocado</h1>
+            <h1 class="title"></h1>
+            <img src="assets/delete.svg" alt="Delete icon" id="delete-bin">
         </header>
 
-        <img src="assets/delete.svg" alt="Delete bin icon">
+        <div id="confirm-modal" class="modal hidden">
+            <div class="modal-content">
+                <p id="confirm-text"></p>
+                <div class="modal-actions">
+                    <button id="cancel-delete">Cancel</button>
+                    <button id="confirm-delete" class="danger">Delete</button>
+                </div>
+            </div>
+        </div>
 
-        <footer class="bottom-nav">
-            <a href="inventory.html" class="nav-item active">
-                <img src="images/inventory.svg" alt="Inventory">
-                <p>Inventory</p>
-            </a>
-            <a href="index.html" class="nav-item">
-                <img src="images/home.svg" alt="Home">
-                <p>Home</p>
-            </a>
-            <a href="batch-sizes.html" class="nav-item">
-                <img src="images/batch.svg" alt="Batch Sizes">
-                <p>Batch Sizes</p>
-            </a>
-        </footer>
+        <form id="edit-item-form">
+            <label>Quantity:</label>
+            <input type="text" name="quantity" id="quantity">
 
+            <label>Expiry Date:</label>
+            <input type="date" name="date" id="date">
+
+            <button type="submit">Update Item</button>
+        </form>
     </main>
 </body>
 
