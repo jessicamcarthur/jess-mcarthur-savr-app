@@ -25,7 +25,7 @@ async function fetchAndAppendItems() {
       <div class="item-details">
         <span class="quantity">${item.quantity}</span>
         <a href="edit.html?name=${encodeURIComponent(item.name)}" class="edit-item">
-          <img src="" alt="">
+          <img src="assets/edit.svg" alt="Edit icon">
         </a>
       </div>
     `;

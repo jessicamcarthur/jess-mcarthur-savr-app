@@ -15,12 +15,13 @@ main,
   max-width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
+  padding-bottom: 50px;
 }
 
 header {
   font-family: "Oswald", sans-serif;
   color: #2c3e50;
-  margin: 50px 0 40px;
+  margin: 30px 0 40px;
 }
 
 
@@ -38,9 +39,8 @@ h2 {
   margin-bottom: 10px;
 }
 
-img {
-  width: 224px;
-  height: 24px;
+p{
+  margin: 4px;
 }
 
 .item a img,
@@ -60,24 +60,45 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
   padding: 10px 0;
+  box-sizing: border-box;
+  border: none; /* reset any borders */
 }
 
 .inventory-list .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-top: 1px solid #ccc;
+}
+.inventory-list .item:first-child {
+  border-top: 1px solid #ccc;
+}
+.inventory-list .item:last-child {
   border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-  width: 100%;
-  box-sizing: border-box;
 }
 
-.item:first-child,
-.ingredients .item:first-of-type,
-.expiring-today .item:first-of-type,
-.expiring-week .item:first-of-type {
+.expiring-today .item,
+.expiring-week .item {
+  border-top: 1px solid #ccc;
+}
+.expiring-today .item:last-child,
+.expiring-week .item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.ingredients .item,
+.steps .item {
+  border-top: 1px solid #ccc;
+}
+.ingredients .item:first-child,
+.steps .item:first-child {
+  border-top: none; /* optional, for cleaner top edge */
+}
+
+.ingredients .item:last-child,
+.steps .item:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.inventory-list .item:first-child {
   border-top: 1px solid #ccc;
 }
 
@@ -99,6 +120,7 @@ img {
   color: #555;
   text-align: right;
   min-width: 60px;
+  margin-right: 15px;
 }
 
 .inventory-list .date {
@@ -187,7 +209,11 @@ img {
   border-radius: 6px;
   width: 100%;
   text-decoration: none;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .add-item-button {
@@ -224,6 +250,46 @@ img {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 50px;
+}
+
+.edit-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 50px 0 40px;
+}
+
+.edit-header .title {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.back-arrow img {
+  width: 34px;
+  height: 34px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#delete-bin {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
 }
 
 /* Recipe Page */

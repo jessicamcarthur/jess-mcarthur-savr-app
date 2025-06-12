@@ -37,7 +37,7 @@ form.addEventListener('submit', async (e) => {
   const newDate = dateInput.value;
 
   const { error } = await supabase
-    .from('savr')
+    .from('add')
     .update({ quantity: newQuantity, date: newDate })
     .eq('name', name);
 
@@ -59,25 +59,31 @@ const confirmDelete = document.getElementById('confirm-delete');
 confirmText.textContent = `Are you sure you want to delete "${name}"?`;
 
 // Show modal on delete icon click
-deleteBtn.addEventListener('click', () => {
-  modal.classList.remove('hidden');
-});
+if (deleteBtn && modal && confirmText) {
+  confirmText.textContent = `Are you sure you want to delete "${name}"?`;
 
-// Cancel closes the modal
-cancelDelete.addEventListener('click', () => {
-  modal.classList.add('hidden');
-});
+  deleteBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+  });
+}
 
-// Confirm delete: remove item from Supabase
-confirmDelete.addEventListener('click', async () => {
-  const { error } = await supabase
-    .from('add')
-    .delete()
-    .eq('name', name);
+if (cancelDelete && modal) {
+  cancelDelete.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+}
 
-  if (error) {
-    console.error('Failed to delete item:', error);
-  } else {
-    window.location.href = 'inventory.html';
-  }
-});
+if (confirmDelete) {
+  confirmDelete.addEventListener('click', async () => {
+    const { error } = await supabase
+      .from('add')
+      .delete()
+      .eq('name', name);
+
+    if (error) {
+      console.error('Failed to delete item:', error);
+    } else {
+      window.location.href = 'inventory.html';
+    }
+  });
+}
