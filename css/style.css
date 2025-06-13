@@ -439,4 +439,5 @@ input[type="date"] {
   box-sizing: border-box;
   margin-bottom: 46px;
   color: #1f1f1f;
+  vertical-align: middle;
 }
