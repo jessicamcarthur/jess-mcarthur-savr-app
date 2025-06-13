@@ -423,3 +423,19 @@ button.danger {
   background-color: #dbff30;
   color: #2c3e50;
 }
+
+/* Consistant date input styles across browsers */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #1f1f1f;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  color: #1f1f1f;
+}
