@@ -441,3 +441,8 @@ input[type="date"] {
   color: #1f1f1f;
   line-height: normal;
 }
+
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  line-height: normal;
+}
