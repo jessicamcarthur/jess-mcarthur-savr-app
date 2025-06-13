@@ -3,6 +3,13 @@ import { supabase } from './connection.js';
 const inventoryList = document.querySelector('.inventory-list');
 
 async function fetchAndAppendItems() {
+  const inventoryList = document.querySelector('.inventory-list');
+
+    if (!inventoryList) {
+    console.error('No .inventory-list element found on the page.');
+    return;
+  }
+  
   const { data, error } = await supabase
     .from('add')
     .select('*')
