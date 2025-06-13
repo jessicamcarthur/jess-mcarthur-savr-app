@@ -1,6 +1,7 @@
 import { supabase } from './connection.js';
 
 async function loadItems() {
+    const expiringTodayItems = [];
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -60,14 +61,28 @@ async function loadItems() {
     </div>`;
 
         if (isSameDay(itemDate, today)) {
+            expiringTodayItems.push(item);
             todayContainer.insertAdjacentHTML('beforeend', itemHTML);
         } else if (itemDate > today && itemDate <= oneWeekLater) {
             weekContainer.insertAdjacentHTML('beforeend', itemHTML);
         } else {
-        console.log('Not adding:', item.name);
-    }
+            console.log('Not adding:', item.name);
+        }
     });
 
+if (expiringTodayItems.length > 0) {
+    const notificationModal = document.getElementById('notification-inline');
+    const notificationText = document.getElementById('notification-text');
+    const closeBtn = document.getElementById('notification-close');
+
+    notificationText.textContent = `⚠️ You have ${expiringTodayItems.length} item(s) expiring today!`;
+    notificationModal.classList.remove('hidden');
+
+    closeBtn.addEventListener('click', () => {
+        notificationModal.classList.add('hidden');
+    });
+
+}
 }
 
 document.addEventListener('DOMContentLoaded', loadItems);
