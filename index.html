@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/add-item.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
 </head>
 
 <body id="home-page">
@@ -25,46 +26,12 @@
 
         <section class="expiring-today">
             <h2>Expiring Today</h2>
-            <div class="item">
-                <div>
-                    <p class="name">Feta</p>
-                    <p class="date">19/06/25</p>
-                </div>
-                <a href="recipe.html">
-                    <img src="assets/food-menu.svg" alt="Recipe book icon">
-                </a>
-            </div>
-            <div class="item">
-                <div>
-                    <p class="name">Avocado</p>
-                    <p class="date">19/06/25</p>
-                </div>
-                <a href="recipe.html">
-                    <img src="assets/food-menu.svg" alt="Recipe book icon">
-                </a>
-            </div>
+            <div id="expiring-today-list"></div> <!-- JS will inject items here -->
         </section>
 
         <section class="expiring-week">
             <h2>Expiring This Week</h2>
-            <div class="item">
-                <div>
-                    <p class="name">Milk</p>
-                    <p class="date">21/06/25</p>
-                </div>
-                <a href="recipe.html">
-                    <img src="assets/food-menu.svg" alt="Recipe book icon">
-                </a>
-            </div>
-            <div class="item">
-                <div>
-                    <p class="name">Pastry</p>
-                    <p class="date">22/06/25</p>
-                </div>
-                <a href="recipe.html">
-                    <img src="assets/food-menu.svg" alt="Recipe book icon">
-                </a>
-            </div>
+            <div id="expiring-week-list"></div> <!-- JS will inject items here -->
         </section>
     </main>
 
