@@ -434,6 +434,7 @@ input[type="date"] {
   font-size: 1rem;
   border: 1px solid #1f1f1f;
   border-radius: 4px;
+  height: 44px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 46px;
