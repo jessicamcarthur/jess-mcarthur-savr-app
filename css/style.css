@@ -292,6 +292,25 @@ p{
   cursor: pointer;
 }
 
+.secondary-button {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  background-color: #dbff30;
+  color: #1f1f1f;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
 /* Recipe Page */
 #recipe-page header img.recipe {
   display: block;
@@ -417,6 +436,16 @@ p{
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
+}
+
+.modal-actions button {
+  padding: 12px 24px;       
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 100px;         
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 
 button.danger {
