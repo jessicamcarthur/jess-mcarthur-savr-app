@@ -430,7 +430,7 @@ input[type="date"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: white;
-  padding: 20px;
+  padding: 10px;
   font-size: 1rem;
   border: 1px solid #1f1f1f;
   border-radius: 4px;
@@ -439,6 +439,5 @@ input[type="date"] {
   box-sizing: border-box;
   margin-bottom: 46px;
   color: #1f1f1f;
-  vertical-align:middle;
-  text-align: left;
+  line-height: normal;
 }
