@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('form').style.display = 'none';
     document.querySelector('#confirmation-message').style.display = 'block';
+    document.querySelector('header').style.display = 'none';
   });
 
 });

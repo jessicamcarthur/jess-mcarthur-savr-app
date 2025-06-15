@@ -44,7 +44,10 @@ form.addEventListener('submit', async (e) => {
   if (error) {
     console.error('Failed to update item:', error);
   } else {
-    window.location.href = 'inventory.html';
+    form.style.display = 'none';
+    document.getElementById('confirmation-message').style.display = 'block';
+
+    document.querySelector('header').style.display = 'none';
   }
 });
 
