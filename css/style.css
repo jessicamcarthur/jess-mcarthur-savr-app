@@ -351,26 +351,19 @@ img.confirm {
 /* Recipe Page */
 #recipe-page header img.recipe {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0;
   width: 100%;
   max-width: 900px;
   height: auto;
 }
 
-#recipe-page header .title {
+#recipe-page h1.title {
   margin-top: 0;
+  margin-bottom: 60px;
 }
 
-#recipe-page .ingredients .name {
-  font-weight: normal;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-#recipe-page .steps .item .step {
-  margin: 0;
+.ingredients {
+  padding-bottom: 40px;
 }
 
 /* Batch Sizes Page */
