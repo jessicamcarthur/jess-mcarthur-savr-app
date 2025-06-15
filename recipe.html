@@ -2,155 +2,36 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
-    rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recipe - Savr</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/recipe.js" type="module" defer></script>
 </head>
 
 <body id="recipe-page">
   <main class="container">
     <header>
-      <a href="inventory.html" class="back-arrow"> <img src="assets/back.svg" alt="Back"></a>
-      <img class="recipe" src="assets/tacos.png" alt="Callie vege tacos">
-      <h1 class="title">Callie Vege Tacos</h1>
+      <a href="index.html" class="back-arrow">
+        <img src="assets/back.svg" alt="Back" />
+      </a>
+      <img id="recipe-image" class="recipe" src="" alt="Recipe Image" />
+      <h1 class="title" id="recipe-title">Loading...</h1>
     </header>
 
     <section class="ingredients">
-      <h2>ingredients</h2>
-
-      <div class="item">
-        <div>
-          <p class="name">Soft flour tortillas</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">4</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="name bold">Avocado</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">2</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="name">Pickled red onions</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">1/2 cup</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="name">Red cabbage</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">1/2 cup</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="name bold">Feta cheese</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">1/3 cup</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="name">Cilantro leaves</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">Handful</span>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="name">Hot sauce (like siracha)</p>
-        </div>
-        <div class="item-details">
-          <span class="quantity">200ml</span>
-        </div>
+      <h2>Ingredients</h2>
+      <div id="ingredients-list">
+        <!-- Ingredients injected here -->
       </div>
     </section>
 
     <section class="steps">
       <h2>Steps</h2>
-
-      <div class="item">
-        <div>
-          <p class="step">Place sliced onions in a bowl, then pour the warm pickling liquid over them</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Let it sit for at least 30 minutes</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step bold">Dice the avocado and chip the cilantro</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Shred the red cabbage finely</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step bold">Crumble the feta cheese</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Warm tortillas in a pan</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Layer ingredients onto the tortillas</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Sprinkle the feta and fresh cilantro</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Drizzle hot sauce all over</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div>
-          <p class="step">Serve open-faced for a taco-style presentation</p>
-        </div>
+      <div id="steps-list">
+        <!-- Steps injected here -->
       </div>
     </section>
   </main>
-</body>
 
 </html>
