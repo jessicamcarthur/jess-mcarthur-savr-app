@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    window.location.href = `inventory.html?id=${data.id}`
+    document.querySelector('form').style.display = 'none';
+    document.querySelector('#confirmation-message').style.display = 'block';
   });
 
 });

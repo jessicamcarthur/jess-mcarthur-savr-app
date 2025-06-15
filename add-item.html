@@ -15,7 +15,7 @@
 <body id="add-item-page">
   <main class="container">
     <header>
-<a href="inventory.html" class="back-arrow"> <img src="assets/back.svg" alt="Back"></a>
+      <a href="inventory.html" class="back-arrow"> <img src="assets/back.svg" alt="Back"></a>
       <h1 class="title">Add Item</h1>
     </header>
 
@@ -31,7 +31,13 @@
 
       <button type="submit" class="secondary-button">Add Item</button>
     </form>
-    
+
+    <div id="confirmation-message" style="display:none;">
+      <img class="confirm" src="assets/confirm.svg" alt="confirmation tick">
+      <p>Item added successfully!</p>
+      <a href="inventory.html" class="secondary-button">Done</a>
+    </div>
+
   </main>
 </body>
 
