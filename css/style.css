@@ -567,23 +567,3 @@ input[type="date"] {
   box-sizing: border-box;
   width: 100%;
 }
-
-/* Hide native calendar icon (Safari/Chrome) */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
-/* Optional wrapper for custom icon */
-.date-wrapper {
-  position: relative;
-}
-
-.date-wrapper::after {
-  content: url('calendar-icon.svg'); /* Replace with your icon */
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
