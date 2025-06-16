@@ -547,14 +547,14 @@ input[type="date"], input[type="text"] {
   line-height: normal;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
 select {
   -webkit-appearance: none;
   appearance: none;
-}
-
-input[type="date"]::-webkit-date-and-time-value {
-  text-align: left;
-  line-height: normal;
 }
 
 .notification {
