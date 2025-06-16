@@ -554,6 +554,18 @@ button.danger {
 /* Specific fix: expiry date input should be left-aligned */
 input[type="date"] {
   text-align: left !important;
+  padding: 10px !important;
+  font-size: 1rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  border: 1px solid #3f4845;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  color: #3f4845;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /* Remove default calendar icon in WebKit browsers */
