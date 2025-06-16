@@ -9,7 +9,6 @@
     rel="stylesheet">
   <title>Add Item - Savr</title>
   <link rel="stylesheet" href="css/style.css">
-  <script type="module" src="js/add-item.js" defer></script>
 </head>
 
 <body id="add-item-page">
@@ -21,10 +20,10 @@
 
     <form id="add-item">
       <label>Item Name:</label>
-      <input type="text" name="itemName" required />
+      <input type="text" name="itemName" required>
 
       <label>Quantity:</label>
-      <input type="text" name="quantity" required />
+      <input type="text" name="quantity" required>
 
       <label>Unit:</label>
       <select name="unit" required>
@@ -39,7 +38,7 @@
 
       <label>Expiry Date:</label>
       <div class="date-wrapper">
-      <input type="date" name="expiryDate" required />
+        <input type="date" name="expiryDate" required>
       </div>
 
       <button type="submit" class="secondary-button">Add Item</button>
@@ -52,6 +51,8 @@
     </div>
 
   </main>
+
+  <script type="module" src="js/add-item.js"></script>
 </body>
 
 </html>

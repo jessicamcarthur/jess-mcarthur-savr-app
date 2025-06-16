@@ -9,7 +9,6 @@
         rel="stylesheet">
     <title>Edit - Savr</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/edit.js" defer></script>
 </head>
 
 <body id="edit-page">
@@ -40,7 +39,7 @@
             <input type="text" name="quantity" id="quantity">
 
             <label>Unit:</label>
-            <select name="unit" id="unit" required>
+            <select name="unit" id="unit">
                 <option value="g">g</option>
                 <option value="kg">kg</option>
                 <option value="ml">ml</option>
@@ -62,6 +61,8 @@
             <a href="inventory.html" class="secondary-button">Done</a>
         </div>
     </main>
+
+    <script type="module" src="js/edit.js"></script>
 </body>
 
 </html>
