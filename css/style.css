@@ -554,6 +554,8 @@ button.danger {
 
 /* Consistant style across browsers */
 
+/* Enhanced Safari fixes - add these to your existing CSS */
+
 /* More comprehensive reset for all inputs */
 input, select {
   -webkit-appearance: none;
@@ -564,6 +566,8 @@ input, select {
   /* Keep your existing styles but ensure Safari respects them */
   padding: 10px;
   text-align: left;
+  -webkit-text-align: left; /* Safari specific */
+  direction: ltr; /* Force left-to-right direction */
   font-family: "Bricolage Grotesque", sans-serif;
   font-size: 1rem;
   color: #3f4845;
@@ -606,7 +610,11 @@ select {
   background-position: right 10px center;
   background-size: 12px;
   
+  /* Force left alignment for select */
   text-align: left;
+  text-align-last: left; /* For select options */
+  -webkit-text-align-last: left;
+  direction: ltr;
   min-height: 42px; /* Match date inputs */
 }
 
@@ -616,6 +624,14 @@ select {
     -webkit-text-fill-color: #3f4845;
     background-color: white;
     min-height: 42px;
+    text-align: left;
+    -webkit-text-align: left;
+  }
+  
+  /* Additional Safari select alignment */
+  select {
+    text-align-last: left;
+    -webkit-text-align-last: left;
   }
 }
 
