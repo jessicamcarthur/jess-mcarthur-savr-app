@@ -1,5 +1,7 @@
 # SAVR
 
+> ⚠️ For best performance, please open Savr in [Google Chrome]. Other browsers may not display all features correctly.
+
 ## Overview
 Savr is a web app designed specifically for New Zealand cafés to reduce food waste and improve kitchen efficiency. By tracking inventory expiry dates, sending timely notifications, suggesting recipes using ingredients that are about to expire, and recommending batch sizes based on recent sales trends, the app empowers café staff to make smarter, more sustainable decisions.
 
