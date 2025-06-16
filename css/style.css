@@ -564,12 +564,11 @@ select {
   appearance: none;
 }
 
-select:focus,
 input[type="text"]:focus,
-input[type="date"]:focus {
-  background-color: white;
-  color: #3f4845;
-  outline: 2px solid #1a73e8;
+input[type="date"]:focus,
+select:focus {
+  background-color: white !important;
+  color: #3f4845 !important;
 }
 
 .notification {
