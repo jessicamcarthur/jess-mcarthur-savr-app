@@ -60,7 +60,7 @@ p {
 
 .modal {
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: #333;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -99,7 +99,7 @@ p {
   padding: 12px 24px;
 }
 
-button.danger {
+.danger {
   background-color: #dbff30;
   color: #3f4845;
 }
@@ -111,7 +111,7 @@ button.danger {
   background-color: #eee;
   border: none;
   border-radius: 6px;
-  color: #333 !important;
+  color: #333;
   font-size: 1.1rem;
   font-weight: 700;
   min-width: 100px;
@@ -125,7 +125,7 @@ button.danger {
   border: 1px solid #dbff30;
   border-radius: 6px;
   color: #dbff30;
-  font-weight: 450;
+  font-weight: 400;
   margin-bottom: 12px;
   padding: 12px 16px;
   position: relative;
@@ -228,7 +228,7 @@ button.danger {
 .item-right {
   align-items: center;
   display: flex;
-  gap: 10px;
+  margin-right: 10px;
 }
 
 .edit-link {
@@ -262,7 +262,6 @@ button.danger {
   border: 1px solid #3f4845;
   border-radius: 4px;
   box-sizing: border-box;
-  font-family: "Bricolage Grotesque", sans-serif;
   font-size: 1rem;
   margin-bottom: 46px;
   padding: 10px;
@@ -277,7 +276,6 @@ button.danger {
   color: #3f4845;
   cursor: pointer;
   display: flex;
-  font-family: "Oswald", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   justify-content: space-between;
@@ -333,7 +331,7 @@ select {
 }
 
 .confirmation-wrapper {
- align-items: center;
+  align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -357,7 +355,7 @@ select {
   padding-bottom: 80px;
 }
 
-img.confirm {
+.confirm {
   display: block;
   margin: 0 auto 16px auto;
   width: 200px;
@@ -391,8 +389,8 @@ img.confirm {
 .edit-header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   margin: 50px 0 40px;
+  margin-bottom: 20px;
 }
 
 .edit-header .title {
@@ -448,7 +446,7 @@ img.confirm {
 }
 
 /* Recipes */
-#recipe-page header img.recipe {
+#recipe-page header .recipe {
   display: block;
   height: auto;
   margin: 0;
@@ -509,9 +507,6 @@ img.confirm {
 }
 
 /* Bottom Nav */
-:root {
-  --bottom-nav-height: 60px;
-}
 
 .bottom-nav {
   align-items: center;
@@ -520,7 +515,7 @@ img.confirm {
   border-top-right-radius: 20px;
   bottom: 0;
   display: flex;
-  height: var(--bottom-nav-height);
+  height: 60px;
   justify-content: space-around;
   left: 0;
   position: fixed;
@@ -606,6 +601,7 @@ select {
 
 /* iOS Safari - prevent zoom */
 @supports (-webkit-touch-callout: none) {
+
   input,
   select {
     font-size: 16px;
