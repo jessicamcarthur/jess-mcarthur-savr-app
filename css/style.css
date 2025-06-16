@@ -1,36 +1,36 @@
 /* Base Styles */
 body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #F6F5F4;
+  box-sizing: border-box;
+  color: #3f4845;
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 0 auto;
-  padding: 30px;
-  background: #fff;
-  color: #3f4845;
   max-width: 100vw;
   overflow-x: hidden;
-  box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 30px;
 }
 
 main,
 .container {
+  box-sizing: border-box;
   max-width: 100vw;
   overflow-x: hidden;
-  box-sizing: border-box;
   padding-bottom: 50px;
 }
 
 header {
-  font-family: "Oswald", sans-serif;
   color: #3f4845;
+  font-family: "Oswald", sans-serif;
   margin: 10px 0 40px;
 }
 
 
 h1.title,
 h2 {
-  font-family: "Oswald", sans-serif;
   color: #3f4845;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -48,9 +48,9 @@ p {
 
 .item a img,
 .nav-item img {
-  width: 24px;
   height: 24px;
   margin-bottom: 4px;
+  width: 24px;
 }
 
 /* Overview */
@@ -58,14 +58,97 @@ p {
   margin-bottom: 50px;
 }
 
+.modal {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #F6F5F4;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 100px;
+  padding: 12px 24px;
+}
+
+button.danger {
+  background-color: #dbff30;
+  color: #3f4845;
+}
+
+#cancel-delete {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  color: #333 !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 100px;
+  padding: 14px 28px;
+  text-align: center;
+  user-select: none;
+}
+
+.notification-inline {
+  background-color: #3f4845;
+  border: 1px solid #dbff30;
+  border-radius: 6px;
+  color: #dbff30;
+  font-weight: 450;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  position: relative;
+}
+
+.notification-close {
+  color: #dbff30;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  right: 12px;
+  top: 4px;
+}
+
 /* Inventory Page */
 .item {
+  align-items: center;
+  border: none;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 0;
-  box-sizing: border-box;
-  border: none;
 }
 
 .inventory-list .item {
@@ -114,9 +197,9 @@ p {
   font-weight: 500;
   margin-right: 10px;
   min-width: 0;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .inventory-list .name {
@@ -125,10 +208,10 @@ p {
 
 .quantity {
   color: #555;
-  text-align: right;
-  min-width: 60px;
-  margin-right: 20px;
   font-size: 1rem;
+  margin-right: 20px;
+  min-width: 60px;
+  text-align: right;
 }
 
 .inventory-list .date {
@@ -136,28 +219,28 @@ p {
 }
 
 .item-details {
-  display: flex;
   align-items: center;
+  display: flex;
   flex-grow: 0;
   min-width: 0;
 }
 
 .item-right {
-  display: flex;
   align-items: center;
+  display: flex;
   gap: 10px;
 }
 
 .edit-link {
   color: #3f4845;
-  text-decoration: none;
   font-size: 1.1rem;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 .edit-link img {
-  width: 24px;
   height: 24px;
+  width: 24px;
 }
 
 /* Add Item Page */
@@ -167,114 +250,117 @@ p {
 }
 
 #add-item label {
-  font-weight: 700;
-  font-size: 1.3rem;
   color: #3f4845;
-  text-transform: none;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 6px;
+  text-transform: none;
 }
 
 #add-item input,
 #add-item select {
-  padding: 10px;
-  font-size: 1rem;
-  font-family: "Bricolage Grotesque", sans-serif;
   border: 1px solid #3f4845;
   border-radius: 4px;
-  width: 100%;
   box-sizing: border-box;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1rem;
   margin-bottom: 46px;
+  padding: 10px;
+  width: 100%;
 }
 
 .add-item {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #dbff30;
-  color: #3f4845;
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
   border: none;
-  padding: 12px 16px;
-  cursor: pointer;
-  margin-bottom: 50px;
   border-radius: 6px;
+  color: #3f4845;
+  cursor: pointer;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 select {
-  background: transparent;
+  background: #F6F5F4;
   border: 1px solid #3f4845;
-  padding: 10px;
-  font: inherit;
-  color: #3f4845;
-  width: 100%;
-  box-sizing: border-box;
   border-radius: 4px;
+  box-sizing: border-box;
+  color: #3f4845;
+  font: inherit;
+  padding: 10px;
+  width: 100%;
 }
 
 .primary-button {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  background-color: #dbff30;
-  color: #3f4845;
-  font-weight: 700;
-  font-size: 1rem;
-  border: none;
-  padding: 12px 16px;
-  cursor: pointer;
-  border-radius: 6px;
-  width: 100%;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  background-color: #dbff30;
+  border: none;
+  border-radius: 6px;
   box-sizing: border-box;
+  color: #3f4845;
+  cursor: pointer;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: space-between;
   overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .add-item-button {
-  width: 100%;
   box-sizing: border-box;
   margin-bottom: 50px;
+  width: 100%;
 }
 
 .plus-icon {
   font-size: 1.5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 .confirmation-wrapper {
-  height: 100vh;
+ align-items: center;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
 }
 
 #confirmation-message {
-  display: none;
-  height: 100vh;
+  align-items: center;
+  color: #3f4845;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   margin-top: 30px;
   padding: 20px;
-  font-size: 1.2rem;
-  color: #3f4845;
+  text-align: center;
 }
 
 #confirmation-message p {
-  padding-bottom: 80px;
   font-weight: 500;
+  padding-bottom: 80px;
 }
 
 img.confirm {
-  width: 200px;
   display: block;
   margin: 0 auto 16px auto;
+  width: 200px;
 }
 
 /* Edit Item */
@@ -284,22 +370,22 @@ img.confirm {
 }
 
 #edit-item-form label {
-  font-weight: 700;
-  font-size: 1.3rem;
   color: #3f4845;
-  text-transform: none;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 6px;
+  text-transform: none;
 }
 
 #edit-item-form input,
 #edit-item-form select {
-  padding: 10px;
-  font-size: 1rem;
   border: 1px solid #3f4845;
   border-radius: 4px;
-  width: 100%;
   box-sizing: border-box;
+  font-size: 1rem;
   margin-bottom: 50px;
+  padding: 10px;
+  width: 100%;
 }
 
 .edit-header {
@@ -315,65 +401,64 @@ img.confirm {
 }
 
 .title-row {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .back-arrow {
-  display: inline-flex;
   align-items: center;
-  width: auto;
-  padding: 0;
+  display: inline-flex;
   margin: 0;
+  padding: 0;
   text-decoration: none;
+  width: auto;
 }
 
 .back-arrow img {
-  width: 34px;
-  height: 34px;
   display: block;
+  height: 34px;
   margin-bottom: 20px;
+  width: 34px;
 }
 
 #delete-bin {
-  width: 34px;
-  height: 34px;
   cursor: pointer;
+  height: 34px;
+  width: 34px;
 }
 
 .secondary-button {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
   background-color: #dbff30;
-  color: #3f4845;
-  font-weight: 700;
-  font-size: 1rem;
   border: none;
-  padding: 12px 16px;
-  cursor: pointer;
   border-radius: 6px;
-  text-align: center;
-
-  width: 100%;
-  display: block;
   box-sizing: border-box;
+  color: #3f4845;
+  cursor: pointer;
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   margin-top: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
 }
 
-/* Recipe Page */
+/* Recipes */
 #recipe-page header img.recipe {
   display: block;
-  margin: 0;
-  width: 100%;
-  max-width: 900px;
   height: auto;
+  margin: 0;
+  max-width: 900px;
+  width: 100%;
 }
 
 #recipe-page h1.title {
-  margin-top: 0;
   margin-bottom: 60px;
+  margin-top: 0;
 }
 
 .ingredients {
@@ -382,45 +467,45 @@ img.confirm {
 
 /* Batch Sizes Page */
 #batch-sizes-page .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
 #batch-sizes-page header {
-  width: 100%;
-  text-align: left;
   margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
 }
 
 #batch-sizes-page .title {
-  text-align: left;
   margin-left: 0;
+  text-align: left;
 }
 
 .become-member {
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #dbff30;
-  color: #3f4845;
-  text-decoration: none;
-  margin: 50px 0;
-  width: 100%;
   border-radius: 6px;
+  color: #3f4845;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  justify-content: center;
+  margin: 50px 0;
   padding: 12px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .premium img {
-  width: 300px;
-  height: auto;
   display: block;
+  height: auto;
   margin: 0;
+  width: 300px;
 }
 
 /* Bottom Nav */
@@ -429,199 +514,100 @@ img.confirm {
 }
 
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: var(--bottom-nav-height);
-  background-color: #dbff30;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
-  z-index: 1000;
+  background-color: #dbff30;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  bottom: 0;
+  display: flex;
+  height: var(--bottom-nav-height);
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1000;
 }
 
 .nav-item {
+  align-items: center;
+  color: #3f4845;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 0.9rem;
   justify-content: center;
   text-decoration: none;
-  color: #3f4845;
-  font-size: 0.9rem;
-}
-
-
-/* Modal All Pages */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal.hidden {
-  display: none;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  width: 300px;
-}
-
-.modal-actions {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.modal-actions button {
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  min-width: 100px;
-  border-radius: 6px;
-  cursor: pointer;
-  border: none;
-}
-
-button.danger {
-  background-color: #dbff30;
-  color: #3f4845;
-}
-
-#cancel-delete {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  color: #333 !important;
-  background-color: #eee;
-  font-weight: 700;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  border-radius: 6px;
-  min-width: 100px;
-  text-align: center;
-  user-select: none;
-}
-
-.notification {
-  background-color: #fffae6;
-  border: 1px solid #f5c518;
-  color: #b37700;
-  padding: 12px 16px;
-  border-radius: 6px;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.hidden {
-  display: none;
-}
-
-.notification-inline {
-  background-color: #3f4845;
-  border: 1px solid #dbff30;
-  color: #dbff30;
-  padding: 12px 16px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  font-weight: 450;
-  position: relative;
-}
-
-.notification-close {
-  position: absolute;
-  top: 4px;
-  right: 12px;
-  font-size: 30px;
-  font-weight: 500;
-  color: #dbff30;
-  cursor: pointer;
 }
 
 /* Consistant style across browsers */
-input, select {
-  -webkit-appearance: none;
+input,
+select {
   -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-align: left;
   appearance: none;
+  background-color: #F6F5F4;
+  background-image: none;
+  border: 1px solid #3f4845;
   border-radius: 4px;
-  padding: 10px;
-  text-align: left;
-  -webkit-text-align: left; /* Safari specific */
-  direction: ltr; /* Force left-to-right direction */
+  box-sizing: border-box;
+  color: #3f4845;
+  direction: ltr;
   font-family: "Bricolage Grotesque", sans-serif;
   font-size: 1rem;
-  color: #3f4845;
-  border: 1px solid #3f4845;
-  background-color: white;
-  background-image: none;
-  
-  /* Remove default margins */
   margin: 0;
-  box-sizing: border-box;
+  padding: 10px;
+  text-align: left;
 }
 
 /* Specific fixes for date inputs */
 input[type="date"] {
-  padding: 10px;
-  min-height: 42px;
+  background-color: #F6F5F4;
   line-height: normal;
-  background-color: white;
+  min-height: 42px;
+  padding: 10px;
 }
 
 /* Hide Safari's default date picker */
 input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 1;
   cursor: pointer;
+  opacity: 1;
 }
 
 /* Specific fixes for select elements */
 select {
-  padding: 10px;
-  padding-right: 35px;
-  background-color: white;
-  
-  /* Force left alignment for select */
-  text-align: left;
-  text-align-last: left;
   -webkit-text-align-last: left;
+  background-color: #F6F5F4;
   direction: ltr;
   min-height: 42px;
+  padding: 10px;
+  padding-right: 35px;
+  text-align: left;
+  text-align-last: left;
 }
 
 /* Safari-specific overrides */
 @supports (-webkit-appearance: none) {
-  input[type="date"], select {
+
+  input[type="date"],
+  select {
+    -webkit-text-align: left;
     -webkit-text-fill-color: #3f4845;
-    background-color: white;
+    background-color: #F6F5F4;
     min-height: 42px;
     text-align: left;
-    -webkit-text-align: left;
   }
-  
+
   /* Additional Safari select alignment */
   select {
-    text-align-last: left;
     -webkit-text-align-last: left;
+    text-align-last: left;
   }
 }
 
 /* iOS Safari - prevent zoom */
 @supports (-webkit-touch-callout: none) {
-  input, select {
+  input,
+  select {
     font-size: 16px;
     min-height: 44px;
   }
