@@ -554,16 +554,19 @@ button.danger {
 
 /* Consistant style across browsers */
 input[type="date"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: white;
-  color: #3f4845;
   font-family: "Bricolage Grotesque", sans-serif;
   font-size: 1rem;
+  color: #3f4845;
+  padding: 10px;
   border: 1px solid #3f4845;
   border-radius: 4px;
-  padding: 10px;
   box-sizing: border-box;
   width: 100%;
+}
+
+input {
+ -webkit-appearance: none; /* Safari/Chrome */
+ -moz-appearance: none;    /* Firefox */
+ appearance: none;         /* Standard */
+ border-radius: 0;         /* Remove rounded corners */
 }
