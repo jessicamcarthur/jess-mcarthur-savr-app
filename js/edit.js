@@ -9,13 +9,14 @@ document.querySelector('h1').textContent = name;
 // Form and input elements
 const form = document.getElementById('edit-item-form');
 const quantityInput = document.getElementById('quantity');
+const unitInput = document.getElementById('unit');
 const dateInput = document.getElementById('date');
 
 // Prefill the form with existing data
 async function loadItem() {
   const { data, error } = await supabase
     .from('add')
-    .select('quantity, date')
+    .select('quantity, unit, date')
     .eq('name', name)
     .single();
 
@@ -25,6 +26,7 @@ async function loadItem() {
   }
 
   quantityInput.value = data.quantity;
+  unitInput.value = data.unit;
   dateInput.value = data.date;
 }
 loadItem();
@@ -34,11 +36,12 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const newQuantity = quantityInput.value;
+  const newUnit = unitInput.value;
   const newDate = dateInput.value;
 
   const { error } = await supabase
     .from('add')
-    .update({ quantity: newQuantity, date: newDate })
+    .update({ quantity: newQuantity, unit:newUnit, date: newDate })
     .eq('name', name);
 
   if (error) {

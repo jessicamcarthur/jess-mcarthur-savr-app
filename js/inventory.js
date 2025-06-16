@@ -30,7 +30,7 @@ async function fetchAndAppendItems() {
         <p class="date">${formatDate(item.date)}</p>
       </div>
       <div class="item-details">
-        <span class="quantity">${item.quantity}</span>
+        <span class="quantity">${item.quantity} ${item.unit}</span>
         <a href="edit.html?name=${encodeURIComponent(item.name)}" class="edit-item">
           <img src="assets/edit.svg" alt="Edit icon">
         </a>

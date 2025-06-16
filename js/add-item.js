@@ -18,13 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const formData = new FormData(form);
     const name = formData.get('itemName');
     const quantity = formData.get('quantity');
+    const unit = formData.get('unit');
     const date = formData.get('expiryDate');
 
-    console.log({ name, quantity, date });
+    console.log({ name, quantity, unit, date });
 
     const { data, error } = await supabase
       .from('add')
-      .insert([{ name, quantity, date }])
+      .insert([{ name, quantity, unit, date }])
       .select()
       .single();
 
