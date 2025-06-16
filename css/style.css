@@ -606,19 +606,41 @@ button.danger {
   -moz-appearance: none;
 }
 
-/* Specific fix for date inputs */
-#add-item input[type="date"],
-#edit-item-form input[type="date"] {
-  padding: 10px;
-  text-align: left;
-  font-family: "Bricolage Grotesque", sans-serif;
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.date-wrapper {
+  position: relative;
+}
+
+.date-wrapper input[type="date"] {
+  padding-right: 36px; /* extra space for custom icon */
   background-color: white;
   color: #3f4845;
+  font-family: "Bricolage Grotesque", sans-serif;
   border: 1px solid #3f4845;
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
-  text-align: left !important;
-  appearance: textfield;
   -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.date-wrapper::after {
+  content: url('calendar-icon.svg'); /* replace with your icon */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
