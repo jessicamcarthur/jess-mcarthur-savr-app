@@ -530,11 +530,13 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-input[type="date"], input[type="text"] {
+input[type="date"],
+input[type="text"] {
+  background-color: white !important;
+  color: #3f4845 !important;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: white;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #3f4845;
@@ -543,8 +545,13 @@ input[type="date"], input[type="text"] {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 46px;
-  color: #3f4845;
   line-height: normal;
+}
+
+input:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #3f4845 !important;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
