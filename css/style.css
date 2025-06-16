@@ -553,20 +553,95 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-input[type="date"] {
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 1rem;
-  color: #3f4845;
-  padding: 10px;
-  border: 1px solid #3f4845;
-  border-radius: 4px;
+input, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  
+  /* Force consistent padding and text alignment */
+  padding: 10px !important;
+  text-align: left !important;
+  
+  /* Ensure consistent font rendering */
+  font-family: "Bricolage Grotesque", sans-serif !important;
+  font-size: 1rem !important;
+  color: #3f4845 !important;
+  
+  /* Remove any default margins/borders that Safari might add */
+  margin: 0;
   box-sizing: border-box;
-  width: 100%;
+  
+  /* Prevent Safari from adding its own background */
+  background-color: white;
+  background-image: none;
 }
 
-input {
- -webkit-appearance: none; /* Safari/Chrome */
- -moz-appearance: none;    /* Firefox */
- appearance: none;         /* Standard */
- border-radius: 0;         /* Remove rounded corners */
+/* Specific fixes for date inputs */
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Override Safari's default date input styling */
+  min-height: auto;
+  line-height: normal;
+  
+  /* Ensure the calendar icon doesn't interfere with padding */
+  position: relative;
+}
+
+/* Hide Safari's default date picker icon if needed */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Specific fixes for select elements */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  /* Remove default arrow and add custom styling */
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23333' d='M8 12L3 7h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  
+  /* Ensure padding accounts for the arrow */
+  padding-right: 35px !important;
+  
+  /* Force text alignment */
+  text-align: left !important;
+  text-align-last: left !important; /* For some browsers */
+}
+
+/* Additional Safari-specific fixes */
+@supports (-webkit-appearance: none) {
+  input, select {
+    /* Safari-specific overrides */
+    -webkit-text-fill-color: #3f4845;
+    -webkit-opacity: 1;
+  }
+  
+  input[type="date"] {
+    /* Ensure date inputs don't get weird height in Safari */
+    height: auto;
+    min-height: 40px; /* Adjust based on your design */
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  input, select {
+    /* iOS Safari tends to zoom on focus, this prevents it */
+    font-size: 16px !important; /* iOS won't zoom if font-size is 16px or larger */
+  }
+  
+  input[type="date"] {
+    /* iOS date input specific fixes */
+    -webkit-appearance: none;
+    appearance: none;
+  }
 }
