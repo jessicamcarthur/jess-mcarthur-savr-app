@@ -8,6 +8,38 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+select {
+  -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;         /* Standard */
+  border-radius: 0;
+  background: white;
+  color: #3f4845;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #3f4845;
+}
+
+select {
+  background: transparent;
+  padding: 0.5em;
+  font: inherit;
+  color: inherit;
+}
+
+input[type="date"] {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: left !important;
 }
 
 main,
@@ -49,6 +81,65 @@ p {
   width: 24px;
   height: 24px;
   margin-bottom: 4px;
+}
+
+
+input[type="date"] {
+  padding: 10px 12px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  background-color: white;
+  color: #3f4845;
+  border: 1px solid #3f4845;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: left !important;
+}
+
+/* Left-align internal date parts in Safari */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+/* Autofill Fix for inputs in Safari and Firefox */
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #3f4845 !important;
+  background-color: white !important;
+}
+
+input:-moz-autofill,
+select:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  color: #3f4845 !important;
+  background-color: white !important;
+}
+
+/* === Focus states for accessibility === */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #3f4845;
+  background-color: white;
+  color: #3f4845;
+}
+
+/* === Prevent form inputs from overflowing or causing layout shifts === */
+form {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Overview */
@@ -200,6 +291,17 @@ p {
   cursor: pointer;
   margin-bottom: 50px;
   border-radius: 6px;
+}
+
+select {
+  background: transparent;
+  border: 1px solid #3f4845;
+  padding: 10px;
+  font: inherit;
+  color: #3f4845;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .primary-button {
@@ -504,6 +606,20 @@ button.danger {
   user-select: none;
 }
 
+.notification {
+  background-color: #fffae6;
+  border: 1px solid #f5c518;
+  color: #b37700;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
 .notification-inline {
   background-color: #3f4845;
   border: 1px solid #dbff30;
@@ -523,10 +639,6 @@ button.danger {
   font-weight: 500;
   color: #dbff30;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
 
 /* Consistant style across browsers */
@@ -565,62 +677,4 @@ button.danger {
   text-align: left !important;
   appearance: textfield;
   -webkit-appearance: textfield;
-}
-
-/* Left align the internal date parts for Safari */
-input[type="date"]::-webkit-datetime-edit,
-input[type="date"]::-webkit-datetime-edit-fields-wrapper,
-input[type="date"]::-webkit-datetime-edit-year-field,
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field {
-  text-align: left !important;
-  padding-left: 0 !important;
-}
-
-/* Autofill Fixes */
-#add-item input:-webkit-autofill,
-#add-item select:-webkit-autofill,
-#edit-item-form input:-webkit-autofill,
-#edit-item-form select:-webkit-autofill {
-  box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: #3f4845 !important;
-  background-color: white !important;
-}
-
-#add-item input:-moz-autofill,
-#add-item select:-moz-autofill,
-#edit-item-form input:-moz-autofill,
-#edit-item-form select:-moz-autofill {
-  box-shadow: 0 0 0 1000px white inset !important;
-  color: #3f4845 !important;
-  background-color: white !important;
-}
-
-/* Focus states */
-#add-item input:focus,
-#add-item select:focus,
-#edit-item-form input:focus,
-#edit-item-form select:focus {
-  background-color: white;
-  color: #3f4845;
-  outline: none;
-  border: 1px solid #3f4845;
-}
-
-input[type="date"] {
-  text-align: left !important;
-}
-
-.notification {
-  background-color: #fffae6;
-  border: 1px solid #f5c518;
-  color: #b37700;
-  padding: 12px 16px;
-  border-radius: 6px;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.hidden {
-  display: none;
 }
