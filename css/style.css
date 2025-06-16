@@ -553,17 +553,11 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-
-/* Enhanced Safari fixes - add these to your existing CSS */
-
-/* More comprehensive reset for all inputs */
 input, select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 4px; /* Keep your existing border radius */
-  
-  /* Keep your existing styles but ensure Safari respects them */
+  border-radius: 4px;
   padding: 10px;
   text-align: left;
   -webkit-text-align: left; /* Safari specific */
@@ -572,26 +566,23 @@ input, select {
   font-size: 1rem;
   color: #3f4845;
   border: 1px solid #3f4845;
-  
-  /* Ensure white background */
   background-color: white;
   background-image: none;
   
-  /* Remove any default margins that Safari might add */
+  /* Remove default margins */
   margin: 0;
   box-sizing: border-box;
 }
 
 /* Specific fixes for date inputs */
 input[type="date"] {
-  /* Ensure Safari respects your padding */
   padding: 10px;
-  min-height: 42px; /* Gives more space for the text */
+  min-height: 42px;
   line-height: normal;
   background-color: white;
 }
 
-/* Hide Safari's default date picker icon if needed */
+/* Hide Safari's default date picker */
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
   cursor: pointer;
@@ -599,26 +590,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* Specific fixes for select elements */
 select {
-  /* Ensure proper padding and background */
   padding: 10px;
-  padding-right: 35px; /* Space for custom arrow */
+  padding-right: 35px;
   background-color: white;
-  
-  /* Add custom arrow */
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%233f4845' d='M8 12L3 7h10z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
   
   /* Force left alignment for select */
   text-align: left;
-  text-align-last: left; /* For select options */
+  text-align-last: left;
   -webkit-text-align-last: left;
   direction: ltr;
-  min-height: 42px; /* Match date inputs */
+  min-height: 42px;
 }
 
-/* Safari-specific overrides without !important */
+/* Safari-specific overrides */
 @supports (-webkit-appearance: none) {
   input[type="date"], select {
     -webkit-text-fill-color: #3f4845;
@@ -635,10 +619,10 @@ select {
   }
 }
 
-/* iOS Safari - prevent zoom and ensure proper sizing */
+/* iOS Safari - prevent zoom */
 @supports (-webkit-touch-callout: none) {
   input, select {
-    font-size: 16px; /* Prevents iOS zoom on focus */
-    min-height: 44px; /* iOS recommended touch target size */
+    font-size: 16px;
+    min-height: 44px;
   }
 }
