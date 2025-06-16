@@ -530,7 +530,7 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-input[type="date"], input[type="text"] {
+input[type="date"], input[type="text"], select, button {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
