@@ -12,20 +12,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input,
+input {
+ -webkit-appearance: none; /* Safari/Chrome */
+ -moz-appearance: none;    /* Firefox */
+ appearance: none;         /* Standard */
+ border-radius: 0;         /* Remove rounded corners */
+}
+
 select {
-  -webkit-appearance: none; /* Safari/Chrome */
-  -moz-appearance: none;    /* Firefox */
-  appearance: none;         /* Standard */
-  border-radius: 0;
-  background: white;
-  color: #3f4845;
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 1rem;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #3f4845;
+ -webkit-appearance: none; /* Remove Safari default */
+ -moz-appearance: none;    /* For Firefox */
+ appearance: none;         /* Standard */
+ background: transparent;
+ border: none;
+ padding: 0.5em;
+ font: inherit;
+ color: inherit;
+ border-radius: 0;
 }
 
 select {
@@ -81,65 +84,6 @@ p {
   width: 24px;
   height: 24px;
   margin-bottom: 4px;
-}
-
-
-input[type="date"] {
-  padding: 10px 12px;
-  font-family: "Bricolage Grotesque", sans-serif;
-  background-color: white;
-  color: #3f4845;
-  border: 1px solid #3f4845;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-  appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  text-align: left !important;
-}
-
-/* Left-align internal date parts in Safari */
-input[type="date"]::-webkit-datetime-edit,
-input[type="date"]::-webkit-datetime-edit-fields-wrapper,
-input[type="date"]::-webkit-datetime-edit-year-field,
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field {
-  text-align: left !important;
-  padding-left: 0 !important;
-}
-
-/* Autofill Fix for inputs in Safari and Firefox */
-input:-webkit-autofill,
-select:-webkit-autofill,
-textarea:-webkit-autofill {
-  box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: #3f4845 !important;
-  background-color: white !important;
-}
-
-input:-moz-autofill,
-select:-moz-autofill,
-textarea:-moz-autofill {
-  box-shadow: 0 0 0 1000px white inset !important;
-  color: #3f4845 !important;
-  background-color: white !important;
-}
-
-/* === Focus states for accessibility === */
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border: 1px solid #3f4845;
-  background-color: white;
-  color: #3f4845;
-}
-
-/* === Prevent form inputs from overflowing or causing layout shifts === */
-form {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* Overview */
