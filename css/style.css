@@ -545,12 +545,12 @@ button.danger {
   background-color: white;
   color: #3f4845;
   appearance: none;
-  text-align: left;
+  text-align: left !important;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
-/* Specific fix for date inputs in both forms */
+/* Specific fix for date inputs */
 #add-item input[type="date"],
 #edit-item-form input[type="date"] {
   padding: 10px;
@@ -562,13 +562,19 @@ button.danger {
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
+  text-align: left !important;
+  appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
-/* Remove calendar icon (optional) */
-#add-item input[type="date"]::-webkit-calendar-picker-indicator,
-#edit-item-form input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
+/* Left align the internal date parts for Safari */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field {
+  text-align: left !important;
+  padding-left: 0 !important;
 }
 
 /* Autofill Fixes */
@@ -602,26 +608,7 @@ button.danger {
 }
 
 input[type="date"] {
-  text-align: left;
-  text-align-last: left;
-}
-
-input[type="date"]::-webkit-datetime-edit {
-  text-align: left;
-}
-
-input[type="date"]::-webkit-datetime-edit-fields-wrapper {
-  text-align: left;
-}
-
-input[type="date"]::-webkit-datetime-edit-text {
-  text-align: left;
-}
-
-input[type="date"]::-webkit-datetime-edit-year-field,
-input[type="date"]::-webkit-datetime-edit-month-field,
-input[type="date"]::-webkit-datetime-edit-day-field {
-  text-align: left;
+  text-align: left !important;
 }
 
 .notification {
