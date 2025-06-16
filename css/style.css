@@ -601,6 +601,29 @@ button.danger {
   border: 1px solid #3f4845;
 }
 
+input[type="date"] {
+  text-align: left;
+  text-align-last: left;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+  text-align: left;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  text-align: left;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+  text-align: left;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field {
+  text-align: left;
+}
+
 .notification {
   background-color: #fffae6;
   border: 1px solid #f5c518;
