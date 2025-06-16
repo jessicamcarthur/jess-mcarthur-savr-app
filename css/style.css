@@ -530,45 +530,67 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-input[type="date"],
-input[type="text"] {
-  background-color: white !important;
-  color: #3f4845 !important;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+#add-item input,
+#add-item select,
+#edit-item-form input,
+#edit-item-form select {
   padding: 10px;
   font-size: 1rem;
+  font-family: "Bricolage Grotesque", sans-serif;
   border: 1px solid #3f4845;
   border-radius: 4px;
-  height: 44px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 46px;
+  background-color: white;
+  color: #3f4845;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   line-height: normal;
+  text-align: left;
 }
 
-input:-webkit-autofill,
-select:-webkit-autofill {
-  box-shadow: 0 0 0 1000px white inset !important;
-  -webkit-text-fill-color: #3f4845 !important;
+/* Specific fix: expiry date input should be left-aligned */
+input[type="date"] {
+  text-align: left !important;
 }
 
+/* Remove default calendar icon in WebKit browsers */
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
 
-select {
-  -webkit-appearance: none;
-  appearance: none;
+/* Autofill Fixes */
+input:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #3f4845 !important;
+  background-color: white !important;
 }
 
+input:-moz-autofill,
+select:-moz-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  color: #3f4845 !important;
+  background-color: white !important;
+}
+
+/* Autofill focus state (optional for extra polish) */
+input:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  border-color: #3f4845;
+}
+
+/* Focus states */
 input[type="text"]:focus,
 input[type="date"]:focus,
 select:focus {
   background-color: white !important;
   color: #3f4845 !important;
+  outline: none;
+  border: 1px solid #3f4845;
 }
 
 .notification {
