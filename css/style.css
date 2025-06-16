@@ -545,62 +545,58 @@ button.danger {
   background-color: white;
   color: #3f4845;
   appearance: none;
+  text-align: left;
   -webkit-appearance: none;
   -moz-appearance: none;
-  line-height: normal;
-  text-align: left;
 }
 
-/* Specific fix: expiry date input should be left-aligned */
-input[type="date"] {
-  text-align: left !important;
-  padding: 10px !important;
-  font-size: 1rem;
+/* Specific fix for date inputs in both forms */
+#add-item input[type="date"],
+#edit-item-form input[type="date"] {
+  padding: 10px;
+  text-align: left;
   font-family: "Bricolage Grotesque", sans-serif;
+  background-color: white;
+  color: #3f4845;
   border: 1px solid #3f4845;
   border-radius: 4px;
   width: 100%;
   box-sizing: border-box;
-  background-color: white;
-  color: #3f4845;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
-/* Remove default calendar icon in WebKit browsers */
-input[type="date"]::-webkit-calendar-picker-indicator {
+/* Remove calendar icon (optional) */
+#add-item input[type="date"]::-webkit-calendar-picker-indicator,
+#edit-item-form input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
 
 /* Autofill Fixes */
-input:-webkit-autofill,
-select:-webkit-autofill {
+#add-item input:-webkit-autofill,
+#add-item select:-webkit-autofill,
+#edit-item-form input:-webkit-autofill,
+#edit-item-form select:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
   -webkit-text-fill-color: #3f4845 !important;
   background-color: white !important;
 }
 
-input:-moz-autofill,
-select:-moz-autofill {
+#add-item input:-moz-autofill,
+#add-item select:-moz-autofill,
+#edit-item-form input:-moz-autofill,
+#edit-item-form select:-moz-autofill {
   box-shadow: 0 0 0 1000px white inset !important;
   color: #3f4845 !important;
   background-color: white !important;
 }
 
-/* Autofill focus state (optional for extra polish) */
-input:-webkit-autofill:focus,
-select:-webkit-autofill:focus {
-  border-color: #3f4845;
-}
-
 /* Focus states */
-input[type="text"]:focus,
-input[type="date"]:focus,
-select:focus {
-  background-color: white !important;
-  color: #3f4845 !important;
+#add-item input:focus,
+#add-item select:focus,
+#edit-item-form input:focus,
+#edit-item-form select:focus {
+  background-color: white;
+  color: #3f4845;
   outline: none;
   border: 1px solid #3f4845;
 }
