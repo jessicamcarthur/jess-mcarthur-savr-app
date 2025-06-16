@@ -530,7 +530,7 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-input[type="date"], input[type="text"], select, button {
+input[type="date"], input[type="text"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -545,6 +545,11 @@ input[type="date"], input[type="text"], select, button {
   margin-bottom: 46px;
   color: #3f4845;
   line-height: normal;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 input[type="date"]::-webkit-date-and-time-value {
