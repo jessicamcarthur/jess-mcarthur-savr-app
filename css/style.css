@@ -12,39 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input {
- -webkit-appearance: none; /* Safari/Chrome */
- -moz-appearance: none;    /* Firefox */
- appearance: none;         /* Standard */
- border-radius: 0;         /* Remove rounded corners */
-}
-
-select {
- -webkit-appearance: none; /* Remove Safari default */
- -moz-appearance: none;    /* For Firefox */
- appearance: none;         /* Standard */
- background: transparent;
- border: none;
- padding: 0.5em;
- font: inherit;
- color: inherit;
- border-radius: 0;
-}
-
-select {
-  background: transparent;
-  padding: 0.5em;
-  font: inherit;
-  color: inherit;
-}
-
-input[type="date"] {
-  appearance: textfield;
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  text-align: left !important;
-}
-
 main,
 .container {
   max-width: 100vw;
@@ -586,60 +553,36 @@ button.danger {
 }
 
 /* Consistant style across browsers */
-#add-item input,
-#add-item select,
-#edit-item-form input,
-#edit-item-form select {
-  padding: 10px;
-  font-size: 1rem;
-  font-family: "Bricolage Grotesque", sans-serif;
-  border: 1px solid #3f4845;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 46px;
-  background-color: white;
-  color: #3f4845;
+input[type="date"] {
   appearance: none;
-  text-align: left !important;
   -webkit-appearance: none;
   -moz-appearance: none;
+  background-color: white;
+  color: #3f4845;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1rem;
+  border: 1px solid #3f4845;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
+/* Hide native calendar icon (Safari/Chrome) */
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
 
+/* Optional wrapper for custom icon */
 .date-wrapper {
   position: relative;
 }
 
-.date-wrapper input[type="date"] {
-  padding-right: 36px; /* extra space for custom icon */
-  background-color: white;
-  color: #3f4845;
-  font-family: "Bricolage Grotesque", sans-serif;
-  border: 1px solid #3f4845;
-  border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-appearance: textfield;
-  appearance: textfield;
-}
-
-.date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  position: absolute;
-  right: 10px;
-  cursor: pointer;
-}
-
 .date-wrapper::after {
-  content: url('calendar-icon.svg'); /* replace with your icon */
+  content: url('calendar-icon.svg'); /* Replace with your icon */
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
