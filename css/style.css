@@ -586,9 +586,6 @@ input[type="date"]:focus {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select {
-    background-position: right 10px center;
-  }
 
 /* Hide Safari's default date picker */
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -631,28 +628,6 @@ select {
   select:focus,
   input[type="date"]:focus {
     border-color: #A5C328;
-    outline: none;
-  }
-
-  /* Additional Safari select alignment */
-  select {
-    -webkit-text-align-last: left;
-    text-align-last: left;
-  }
-}
-
-/* iOS Safari - prevent zoom */
-@supports (-webkit-touch-callout: none) {
-
-  input,
-  select {
-    font-size: 16px;
-    min-height: 44px;
-  }
-
-  input:focus,
-  select:focus {
-    border-color: #A5C328 !important;
     outline: none;
   }
 }
