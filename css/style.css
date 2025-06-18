@@ -268,6 +268,12 @@ p {
   width: 100%;
 }
 
+input:focus,
+select:focus {
+  border-color: #a5c328;
+  outline: none;
+}
+
 .add-item {
   align-items: center;
   background-color: #dbff30;
@@ -562,10 +568,39 @@ input[type="date"] {
   padding: 10px;
 }
 
+input:focus,
+select:focus {
+  border-color: #A5C328;
+  outline: none;
+}
+
+input:active,
+select:active {
+  border-color: #A5C328 !important;
+  transform: scale(0.999); /* Subtle feedback */
+}
+
+input[type="date"]:focus {
+  border-color: #A5C328 !important;
+  outline: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-position: right 10px center;
+  }
+
 /* Hide Safari's default date picker */
 input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   opacity: 1;
+}
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 /* Specific fixes for select elements */
@@ -592,6 +627,13 @@ select {
     text-align: left;
   }
 
+  input:focus,
+  select:focus,
+  input[type="date"]:focus {
+    border-color: #A5C328;
+    outline: none;
+  }
+
   /* Additional Safari select alignment */
   select {
     -webkit-text-align-last: left;
@@ -606,5 +648,11 @@ select {
   select {
     font-size: 16px;
     min-height: 44px;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: #A5C328 !important;
+    outline: none;
   }
 }
